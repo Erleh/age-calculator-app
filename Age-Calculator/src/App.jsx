@@ -17,7 +17,7 @@ import './App.css'
 
 function Input({display, inputName}) {
   return (
-    <li>
+    <li className="container">
       <label htmlFor={inputName}>{display}</label>
       <input id={inputName} type="number"></input>
     </li>
@@ -30,7 +30,7 @@ function Input({display, inputName}) {
 //  Responsiveness
 function DateInputs() {
   return (
-    <ul>
+    <ul className="container">
       <Input 
         display={"day"}
         inputName={"day"}
@@ -90,7 +90,7 @@ function Results() {
 // Should style card here
 function Calculator() {
   return (
-    <div>
+    <div className="container card">
       <DateForm />
       <Results />
     </div>
