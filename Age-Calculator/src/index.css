@@ -49,6 +49,28 @@ ul {
   flex-direction: column;
 }
 
+.card button {
+  margin: 1rem;
+  background-color: var(--clr-prm-high);
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.card hr {
+  position: absolute;
+  width: 80px;
+}
+
+.card button svg {
+  max-width: 50%;
+}
+
+.card button svg path {
+  stroke-width: 4px;
+}
+
 form .container li label{
   text-align: left;
   text-transform: uppercase;

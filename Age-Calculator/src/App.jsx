@@ -21,7 +21,7 @@ function Input({display, inputName}) {
       <label htmlFor={inputName}>{display}</label>
       <input id={inputName} type="number"></input>
     </li>
-  )
+  );
 }
 
 // To-do:
@@ -44,16 +44,28 @@ function DateInputs() {
         inputName={"year"}
       />
     </ul>
-  )
+  );
+}
+
+// To-do: position hr correctly to match style
+function InputButton() {
+  return (
+    <>
+      <button>
+        <hr />
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" strokeWidth="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+      </button>
+    </>
+  );
 }
 
 function DateForm() {
   return (
     <form>
       <DateInputs />
-      <input type="submit"></input>
+      <InputButton />
     </form>
-  )
+  );
 }
 
 // To-do:
@@ -64,7 +76,7 @@ function Result({display, idName}) {
     <li id={idName}>
       <span>--</span> {display}
     </li>
-  )
+  );
 }
 
 function Results() {
@@ -83,7 +95,7 @@ function Results() {
         idName={"days-res"}
       />
     </ul>
-  )
+  );
 }
 
 // To-do:
@@ -94,13 +106,13 @@ function Calculator() {
       <DateForm />
       <Results />
     </div>
-  )
+  );
 }
 
 function App() {
   return (
     <Calculator />
-  )
+  );
 }
 
 export default App
