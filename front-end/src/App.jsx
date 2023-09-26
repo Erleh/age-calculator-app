@@ -52,18 +52,28 @@ function InputButton() {
   return (
     <>
       <button>
-        <hr />
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" strokeWidth="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
       </button>
     </>
   );
 }
 
+function Divider() {
+  return (
+    <>
+      <div className="divider">
+        <hr />
+        <InputButton />
+      </div>
+    </>
+  )
+}
+
 function DateForm() {
   return (
     <form>
       <DateInputs />
-      <InputButton />
+      <Divider />
     </form>
   );
 }
@@ -81,7 +91,7 @@ function Result({display, idName}) {
 
 function Results() {
   return (
-    <ul>
+    <ul className="container results">
       <Result 
         display={"years"}
         idName={"years-res"} 
