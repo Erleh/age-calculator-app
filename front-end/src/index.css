@@ -51,6 +51,7 @@ ul {
 
 .card button {
   position:relative;
+  left: 40%;
   z-index: 1;
   margin: 2rem auto;
   background-color: var(--clr-prm-high);

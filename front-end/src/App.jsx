@@ -1,4 +1,4 @@
-import './App.css'
+import Moment from 'moment';
 
 // Breaks down the provided design into React Components
 // Individual inputs within a submission type form, and the results from the calculation
@@ -19,7 +19,7 @@ function Input({display, inputName}) {
   return (
     <li className="container">
       <label htmlFor={inputName}>{display}</label>
-      <input id={inputName} type="number"></input>
+      <input type="number" id={inputName} name={inputName}></input>
     </li>
   );
 }
@@ -47,7 +47,6 @@ function DateInputs() {
   );
 }
 
-// To-do: position hr correctly to match style
 function InputButton() {
   return (
     <>
@@ -70,8 +69,21 @@ function Divider() {
 }
 
 function DateForm() {
+  let handleSubmit = (e) => {
+    e.preventDefault();
+
+    let day = e.target.day.value;
+    let month = e.target.month.value;
+    let year = e.target.year.value;
+
+    let date = Moment(`${year}-${month}-${day}`, 'YYYY-MM-DD');
+    console.log(date.isValid());
+    
+    return date.isValid();
+  }
+
   return (
-    <form>
+    <form onSubmit={ handleSubmit }>
       <DateInputs />
       <Divider />
     </form>
@@ -108,14 +120,22 @@ function Results() {
   );
 }
 
+function Card({children}) {
+  return (
+    <div className="container card">
+      { children }
+    </div>
+  );
+}
+
 // To-do:
 // Should style card here
 function Calculator() {
   return (
-    <div className="container card">
+    <Card>
       <DateForm />
       <Results />
-    </div>
+    </Card>
   );
 }
 
