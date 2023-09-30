@@ -79,8 +79,8 @@ export default function DateForm() {
         },
         config: { 
             mass: 1, 
-            tension: 50, 
-            friction: 10 
+            tension: 40, 
+            friction: 20 
         }
     }));
 
@@ -152,7 +152,7 @@ export default function DateForm() {
     }
 
     return (
-        <form onSubmit={ handleSubmit }>
+        <form className="container" onSubmit={ handleSubmit }>
             <DateInputs 
                 isEmpty={isEmpty}
                 badInput={badInput}

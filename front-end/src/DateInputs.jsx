@@ -27,7 +27,7 @@ export default function DateInputs({    isEmpty,
     }
 
     return (
-        <ul className="container">
+        <ul className="container dateInputs">
             <Input 
                 display= {"day"}
                 inputName= {"day"}

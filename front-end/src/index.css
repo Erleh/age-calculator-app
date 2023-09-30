@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 5rem 0;
   padding: 0;
   font-family: var(--main-fnt), sans-serif;
 }
@@ -46,6 +46,10 @@ ul {
 }
 
 .container li {
+  flex-direction: column;
+}
+
+form.container {
   flex-direction: column;
 }
 
@@ -90,7 +94,7 @@ ul {
   background-color: var(--clr-n-500);
 }
 
-.container .results {
+.card .results {
   flex-direction: column;
   text-align: left;
   line-height: 3.5rem;
@@ -148,6 +152,35 @@ input.error {
 /* For desktop sized screens */
 @media only screen and (min-width: 768px) {
   .card {
-    max-width: 50rem;
+    align-items: flex-start;
+    max-width: 37rem;
+  }
+
+  .card form {
+    width: 80%;
+  }
+
+  .dateInputs {
+    justify-content: flex-start;
+    margin: 0;
+  }
+
+  .dateInputs .container{
+    margin: 0 1rem 0 0;
+  }
+
+  form ul {
+    width: 80%;
+  }
+
+  .card button {
+    margin: 0;
+    left: 100%;
+  }
+
+  .card .results {
+    margin: 0;
+    line-height: 5rem;
+    font-size: 4rem;
   }
 }

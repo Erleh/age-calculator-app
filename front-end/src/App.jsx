@@ -1,8 +1,5 @@
 import DateForm from './DateForm';
 
-// To-do :
-//    styling for desktop
-
 function Card({children}) {
   return (
     <div className="container card">
