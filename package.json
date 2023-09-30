@@ -4,8 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev-front": "cd front-end && npm run dev"
+    "dev-front": "cd front-end && npm run dev",
+    "predeploy": "cd front-end && npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "http://{Erleh}.github.io/{https://github.com/Erleh/age-calculator-app}",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
 }
