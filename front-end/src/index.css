@@ -104,7 +104,7 @@ ul {
   color: var(--clr-prm-high);
 }
 
-form .container li label{
+form li label{
   text-align: left;
   text-transform: uppercase;
   font-weight: 800;
@@ -113,8 +113,8 @@ form .container li label{
   color: var(--clr-n-400);
 }
 
-form .container li input{
-  max-width: 5.5rem;
+form li input{
+  max-width: 6rem;
   height: 3rem;
   border-radius: .5rem;
   border: solid 1px var(--clr-n-300);
@@ -128,6 +128,21 @@ input:focus {
   transition-timing-function: ease-in;
   transition-duration: .2s;
   outline: solid 1px var(--clr-prm-high);
+}
+
+.error {
+  color: var(--clr-prm-err);
+  border-color: var(--clr-prm-err);
+}
+
+input.error {
+  color: var(--clr-n-500);
+}
+
+.errorMessage {
+  color: var(--clr-prm-err);
+  margin: .2rem;
+  font-size: .5rem;
 }
 
 /* For desktop sized screens */
