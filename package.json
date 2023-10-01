@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://Erleh.github.io/age-calculator-app",
   "scripts": {
     "dev-front": "cd front-end && npm run dev",
     "predeploy": "cd front-end && npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "http://{Erleh}.github.io/{https://github.com/Erleh/age-calculator-app}",
   "author": "",
   "license": "ISC",
   "devDependencies": {
