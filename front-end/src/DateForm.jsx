@@ -119,8 +119,6 @@ export default function DateForm() {
             setInvalid(true);
             return;
         }
-        console.log(date.isValid());
-        console.log(date.date());
 
         // valid => Reset Invalid state
         setInvalid(false);
@@ -133,7 +131,7 @@ export default function DateForm() {
             currentDate.date() - date.date() : date.date() - currentDate.date();
         let monthDiff = currentDate.month() > date.month() ? 
             currentDate.month() - date.month() : date.month() - currentDate.month();
-        let yearDiff = currentDate.date() > date.date() ? 
+        let yearDiff = currentDate.year() > date.year() ? 
             currentDate.year() - date.year() : date.year() - currentDate.year();
         
         // Tells animation to start from -> to
